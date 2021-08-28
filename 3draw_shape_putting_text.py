@@ -37,8 +37,11 @@ cv.line(blank, (300,300), (450,450), (105,100,0), thickness=4)
 cv.imshow('line', blank)
 
 # 5. Write text
-cv.putText(blank, 'Hello', (100,250), cv.FONT_HERSHEY_TRIPLEX, 1.0, (0,2550,0), thickness=3)
+cv.putText(blank, 'Hello', (100,250), cv.FONT_HERSHEY_TRIPLEX, 1.0, (0,255,0), thickness=3)
 cv.imshow('line', blank)
+#
+cv.putText(img, 'My Cat', (100,250), cv.FONT_HERSHEY_PLAIN, 1.0, (10,100,0), thickness=3)
+cv.imshow('Cat', img)
 
 cv.waitKey(0)
 
