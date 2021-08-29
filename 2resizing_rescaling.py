@@ -13,14 +13,15 @@ def change_resolution(width, height):
     capture.set(3, width)
     capture.set(4, height)
 
-img = cv.imread('resources/Photos/cat_large.jpg') # bigger image
+
+img = cv.imread('resources/Photos/cat_large.jpg')  # bigger image
 cv.imshow('Cat', img)
 img_resized = rescale_frame(img, scale=0.5)
 cv.imshow('Cat Resized', img_resized)
 
 cv.waitKey(0)
 
-capture = cv.VideoCapture('resources/Videos/dog.mp4') # in this, we use video file
+capture = cv.VideoCapture('resources/Videos/dog.mp4')  # in this, we use video file
 
 while True:
     isTrue, frame = capture.read()
@@ -28,10 +29,8 @@ while True:
     cv.imshow('Video', frame)
     cv.imshow('Video Resized', frame_resized)
 
-    if cv.waitKey(20) & 0xFF==ord('d'):
+    if cv.waitKey(20) & 0xFF == ord('d'):
         break
 
 capture.release()
 cv.destroyAllWindows()
-
-
